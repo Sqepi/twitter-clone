@@ -1,0 +1,12 @@
+[build]
+  # The build directory (where the production files will be generated)
+  publish = "build"  # Use "build" for React, "dist" for Vue, "public" for static HTML
+  # The build command for React
+  command = "npm run build"  # Replace with "yarn build" if using yarn
+
+[[redirects]]
+  # Redirect all routes to index.html (for SPAs)
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
