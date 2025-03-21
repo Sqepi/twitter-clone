@@ -1,6 +1,6 @@
 [build]
   # The build directory (where the production files will be generated)
-  publish = "build"  # Use "build" for React, "dist" for Vue, "public" for static HTML
+  publish = "dist"  # Use "build" for React, "dist" for Vue, "public" for static HTML
   # The build command for React
   command = "npm run build"  # Replace with "yarn build" if using yarn
 
@@ -11,14 +11,18 @@
   status = 200
   force = true
 
-{
-  "files": {
-    "main.css": "/static/css/main.css",
-    "main.js": "/static/js/main.js",
-    "index.html": "/index.html"
-  },
-  "entrypoints": [
-    "static/css/main.css",
-    "static/js/main.js"
-  ]
-}
+[build.environment]
+  NODE_VERSION = "18"
+
+[dev]
+  framework = "#custom"
+  command = "npm run dev"
+  targetPort = 3000
+  port = 8888
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
+[edge_functions]
+  directory = "netlify/edge-functions"
