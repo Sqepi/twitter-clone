@@ -21,8 +21,4 @@
   port = 8888
   publish = "dist"
 
-[functions]
-  directory = "netlify/functions"
 
-[edge_functions]
-  directory = "netlify/edge-functions"
