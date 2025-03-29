@@ -1,28 +1,10 @@
 [build]
-  # The build directory (where the production files will be generated)
-  publish = "dist"  # Use "build" for React, "dist" for Vue, "public" for static HTML
-  # The build command for React
-  command = "npm run build"  # Replace with "yarn build" if using yarn
+  # The build directory for React apps
+  publish = "build"
+  command = "npm run build"
 
 [[redirects]]
   # Redirect all routes to index.html (for SPAs)
   from = "/*"
   to = "/index.html"
   status = 200
-  force = true
-
-[build.environment]
-  NODE_VERSION = "18"
-
-[dev]
-  framework = "#custom"
-  command = "npm run dev"
-  targetPort = 3000
-  port = 8888
-  publish = "dist"
-
-[functions]
-  directory = "netlify/functions"
-
-[edge_functions]
-  directory = "netlify/edge-functions"
