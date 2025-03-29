@@ -1,11 +1,8 @@
+// filepath: c:\Users\Florenc\Desktop\FT\tailwind.config.js
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html",
-  ],
-  safelist: [
-    "bg-red-500", // Example of a class to safelist
-    "text-center",
   ],
   theme: {
     extend: {},

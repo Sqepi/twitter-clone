@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
+import './App.css';  // Make sure this path is correct
+
 function App() {
     const [tweets, setTweets] = useState([
       { id: 1, text: "Hello, world! 🚀", username: "JohnDoe" },
@@ -44,4 +46,3 @@ function App() {
   }
   
   export default App;
-  
