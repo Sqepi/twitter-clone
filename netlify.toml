@@ -1,14 +1,8 @@
 [build]
-  # The build directory for React apps
-  publish = "build"
+  publish = "dist"
   command = "npm run build"
 
-[build.environment]
-  NODE_VERSION = "16"
-
-redirects:
-  - force: true
-    from: /*
-    status: 200
-    to: /index.html
-redirectsOrigin: config
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
