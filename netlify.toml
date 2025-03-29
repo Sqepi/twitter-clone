@@ -3,8 +3,9 @@
   publish = "build"
   command = "npm run build"
 
-[[redirects]]
-  # Redirect all routes to index.html (for SPAs)
-  from = "/*"
-  to = "/index.html"
-  status = 200
+redirects:
+  - force: true
+    from: /*
+    status: 200
+    to: /index.html
+redirectsOrigin: config
